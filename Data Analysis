@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oluwapelumi Omikunle — Procurement &amp; Data Analytics</title>
+<meta name="description" content="Procurement analyst turned data analyst. Power BI, DAX, and supply chain intelligence dashboards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">OLUWAPELUMI OMIKUNLE<span class="logo-dot">.</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <p class="path-label">~/oluwapelumi/portfolio</p>
+
+    <h1 class="hero-title">
+      I turn raw data<br>
+      into decisions you can act on.
+    </h1>
+
+    <p class="hero-sub">
+      Procurement and data analyst working across Excel, Power BI, and SQL —
+      turning sourcing and spend data into dashboards buyers actually act on.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View dashboards</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+
+    <div class="code-card reveal is-visible">
+      <div class="code-card-bar">
+        <span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
+        <span class="code-filename">spend_analysis.sql</span>
+      </div>
+      <pre class="code-body"><code><span class="sql-kw">SELECT</span>
+  supplier,
+  <span class="sql-kw">ROUND</span>(<span class="sql-kw">SUM</span>(spend_ngn), <span class="sql-num">2</span>) <span class="sql-kw">AS</span> total_spend,
+  <span class="sql-kw">COUNT</span>(<span class="sql-kw">DISTINCT</span> po_id) <span class="sql-kw">AS</span> purchase_orders
+<span class="sql-kw">FROM</span> procurement_spend
+<span class="sql-kw">WHERE</span> order_date >= <span class="sql-str">'2025-01-01'</span>
+<span class="sql-kw">GROUP BY</span> supplier
+<span class="sql-kw">ORDER BY</span> total_spend <span class="sql-kw">DESC</span>;
+
+<span class="sql-comment">-- 12 rows returned in 0.021s</span></code></pre>
+    </div>
+  </section>
+
+    <!-- ABOUT -->
+  <section id="about" class="section wrap">
+    <p class="path-label">~/about</p>
+    <div class="about-grid">
+      <div class="about-copy">
+        <h2>From sourcing tables to pivot tables.</h2>
+        <p>
+          I'm a procurement & Supply chain data analytics professional based in Lagos. Who enjoys the moment a messy spreadsheet turns into an actionable insight. I started in
+          operations, and procurement, negotiating with vendors, tracking purchase orders,
+          living inside the spend data most analysts only see secondhand. Then I went looking
+          for the patterns inside it. My toolkit centers on Microsoft Excel, PowerBi, SQL for digging through data, Python for cleaning and modeling it, and dashboards for putting it in front of people who need to act on it.
+        </p>
+        </p>
+         I care most about the questions behind the numbers, why a metric moved, what it means for the business, and how to communicate that without burying anyone in jargon
+        </p>
+         <p>
+          That hybrid lens is the differentiator: I don't just build dashboards, I know what
+          a buyer actually needs to see in one. B.Sc. Agricultural Economics, Obafemi Awolowo
+          University — trained to think in systems, supply, and trade-offs before I ever opened
+          Power BI.
+        </p>
+      </div>
+      <div class="stat-strip" role="list">
+        <div class="stat" role="listitem">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">dashboards shipped</span>
+        </div>
+        <div class="stat" role="listitem">
+          <span class="stat-num">15k+</span>
+          <span class="stat-label">records in largest dataset</span>
+        </div>
+        <div class="stat" role="listitem">
+          <span class="stat-num">₦60bn+</span>
+          <span class="stat-label">spend modeled</span>
+        </div>
+        <div class="stat" role="listitem">
+          <span class="stat-num">2</span>
+          <span class="stat-label">certifications, CFI &amp; Unilever</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="section wrap">
+    <p class="path-label">~/projects</p>
+    <h2>Selected dashboards</h2>
+
+    <div class="project-grid">
+
+      <article class="project-card reveal">
+        <p class="project-eyebrow">Power BI · Dashboard</p>
+        <div class="project-head">
+          <h3>Maritime Terminal Intelligence Dashboard</h3>
+          <span class="project-stat">15,000+ records</span>
+        </div>
+        <p>
+          A star-schema Power BI model tracking cargo flow across multiple regional hubs,
+          with advanced DAX measures surfacing throughput and delay patterns terminal
+          managers actually act on.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+          <span class="tag">Star Schema</span>
+        </div>
+        <a href="#" class="card-link">View case study →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-eyebrow">Power Query · Spend Analysis</p>
+        <div class="project-head">
+          <h3>ProcureIQ</h3>
+          <span class="project-stat">₦60bn+ spend</span>
+        </div>
+        <p>
+          A procurement analytics dashboard built on a Nestlé Nigeria–inspired dataset —
+          1,200 transactions broken down by supplier performance and cost-leakage exposure.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">Power Query</span>
+          <span class="tag">Spend Analysis</span>
+        </div>
+        <a href="#" class="card-link">View case study →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-eyebrow">Power BI · Supply Chain</p>
+        <div class="project-head">
+          <h3>Supply Chain Analysis Dashboard</h3>
+          <span class="project-stat">End-to-end view</span>
+        </div>
+        <p>
+          A supply chain performance view built to make bottlenecks visible across
+          procurement, logistics, and delivery stages on a single canvas.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">Excel</span>
+        </div>
+        <a href="#" class="card-link">View case study →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-eyebrow">Power BI · EDA</p>
+        <div class="project-head">
+          <h3>Ride-Sharing Analysis Dashboard</h3>
+          <span class="project-stat">Demand patterns</span>
+        </div>
+        <p>
+          A trip-level analysis of ride-sharing demand and pricing behaviour, used to
+          practice analytics storytelling outside the procurement domain.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+        </div>
+        <a href="#" class="card-link">View case study →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-eyebrow">Excel · Scorecard</p>
+        <div class="project-head">
+          <h3>Vendor Evaluation Scorecard</h3>
+          <span class="project-stat">Weighted scoring</span>
+        </div>
+        <p>
+          A weighted, 5-point vendor scorecard built in Excel to standardize how suppliers
+          are rated on cost, quality, and delivery — replacing gut-feel sign-off with a
+          repeatable score.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Excel</span>
+          <span class="tag">Vendor Management</span>
+        </div>
+        <a href="#" class="card-link">View case study →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools" class="section wrap">
+    <p class="path-label">~/tools</p>
+    <h2>What I work with</h2>
+
+    <div class="tool-block reveal">
+      <p class="tool-label">bi_and_analytics:</p>
+      <div class="tag-row">
+        <span class="tag tag-lg">Power BI</span>
+        <span class="tag tag-lg">DAX</span>
+        <span class="tag tag-lg">Power Query</span>
+        <span class="tag tag-lg">Excel</span>
+      </div>
+    </div>
+
+    <div class="tool-block reveal">
+      <p class="tool-label">procurement_domain:</p>
+      <div class="tag-row">
+        <span class="tag tag-lg">P2P</span>
+        <span class="tag tag-lg">Vendor Management</span>
+        <span class="tag tag-lg">Spend Analysis</span>
+        <span class="tag tag-lg">Kraljic Matrix</span>
+      </div>
+    </div>
+
+    <div class="tool-block reveal">
+      <p class="tool-label">leveling_up:</p>
+      <div class="tag-row">
+        <span class="tag tag-lg">Python</span>
+        <span class="tag tag-lg">SQL</span>
+        <span class="tag tag-lg">scikit-learn</span>
+        <span class="tag tag-lg">Statistics</span>
+      </div>
+    </div>
+
+    <div class="cert-row reveal">
+      <p class="tool-label">certifications:</p>
+      <ul class="cert-list">
+        <li><span class="cert-issuer">CFI</span> — Financial Modeling &amp; Valuation Analyst</li>
+        <li><span class="cert-issuer">Unilever</span> — Supply Chain Management &amp; Analytics</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section wrap contact-section">
+    <p class="path-label">~/contact</p>
+    <h2>Let's talk data — or sourcing.</h2>
+    <p class="contact-sub">Open to Procurement & Supply chain Analyst, operation Analyst, and Data Analyst roles in Lagos and remote.</p>
+
+    <div class="contact-row">
+      <a href="mailto:Omikunleoluwapelumi@gmail.com" class="btn btn-primary">Email me</a>
+      <a href="https://linkedin.com/in/oluwapelumi-emmanuel" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/your-handle" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <p>Lagos, Nigeria</p>
+  <p class="prompt-end">&gt; end_of_file</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
